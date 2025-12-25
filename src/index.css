@@ -1,0 +1,21 @@
+@import "./styles/theme.css";
+@import "tailwindcss";
+
+* {
+ /* ya scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge purane versions */
+}
+
+::-webkit-scrollbar, 
+::-webkit-scrollabar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/* =========================
+   LAYOUT CONTAINERS
+========================= */                                      
+body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,116 @@
+/* =========================
+   DEFAULT THEME (LIGHT MODE)
+   This is the fallback + light theme
+========================= */
+:root {
+  /* Core colors */
+  --bg: #fff7f2;               /* warm cream background */
+  --card-bg: #ffffff;
+  --text: #1f2937;             /* soft dark text */
+  --muted: #6b7280;
+
+  /* Brand colors */
+  --primary: #ff4d2d;
+  --primary-600: #e64528;
+
+  /* UI tokens */
+  --border: #f1e6df;
+  --glass: rgba(255, 77, 45, 0.06);
+  --shadow: 0 8px 30px rgba(15, 15, 15, 0.08);
+  --radius: 14px;
+
+  /* Form & interaction */
+  --input-bg: var(--card-bg);
+  --input-border: var(--border);
+  --section-bg: var(--bg);
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --button-text: #ffffff;
+}
+
+/* =========================
+   DARK THEME (Overrides only)
+========================= */
+:root[data-theme="dark"] {
+  --bg: #0f1216;               /* charcoal, not pure black */
+  --card-bg: #1a1f26;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+
+  --primary: #ff784e;          /* softer orange */
+  --primary-600: #ff4d2d;
+
+  --border: #2a2f36;
+  --glass: rgba(255, 120, 78, 0.08);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+
+  --hover-bg: rgba(255, 255, 255, 0.06);
+}
+
+/* =========================
+   GLOBAL BASE STYLES
+========================= */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* =========================
+   COMMON ELEMENT STYLES
+========================= */
+button {
+  background: var(--primary);
+  color: var(--button-text);
+  border-radius: var(--radius);
+}
+
+input,
+select,
+textarea {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+/* =========================
+   OPTIONAL LAYOUT UTILITY
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   SPECIAL FEATURE CARDS
+   (Festival / Subscription)
+========================= */
+:root {
+  --special-card-bg: linear-gradient(135deg, #FFEDD5, #FED7AA);
+  --special-card-text: #7C2D12;
+  --special-card-accent: #F97316;
+}
+
+:root[data-theme="dark"] {
+  --special-card-bg: linear-gradient(135deg, #7C2D12, #9A3412);
+  --special-card-text: #FFF7ED;
+  --special-card-accent: #FB923C;
+}
+
+/* =========================
+   EXCLUSIVE / SPECIAL CARD
+========================= */
+.exclusive-card {
+  background: var(--special-card-bg);
+  color: var(--special-card-text);
+  border-left: 6px solid var(--special-card-accent);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.25);
+}
+
+
